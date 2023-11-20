@@ -219,7 +219,7 @@
   <!-- Grounedtext2img. -->
   <div class="columns is-centered has-text-centered">
     <div class="column is-six-fifths">
-      <h2 class="title is-3"><img id="painting_icon" width="4%" src="https://cdn-icons-png.flaticon.com/512/1698/1698535.png"> <span style="font-size: 100%;">Preliminary Evaluation:</span> New Application Scenarios with Learning to Use Tools </h2>
+      <h2 class="title is-3"><img id="painting_icon" width="4%" src="https://cdn-icons-png.flaticon.com/512/1698/1698535.png"> Examples of LLMGA for assisting in image generation and editing. </h2>
       
 
 <div class="slideshow-container">
@@ -233,34 +233,55 @@
 
 <div class="mySlides fade">
   <div class="numbertext">1 / 4</div>
-  <img src="static/image/fig1_1.png" style="width:80%;" >
+  <img src="static/image/fig1_1.png" style="width:60%;" >
   <div class="text">(1) For T2I generation, LLMGA can refine the user's generation prompt to produce more vivid and vibrant images. 
     (2) For similar image generation, LLMGA can understand the component and layout of the input images and generate a similar image.</div>
 </div>
 
 <div class="mySlides fade">
   <div class="numbertext">2 / 4</div>
-  <img src="static/image/fig1_2.png" style="width:80%">
+  <img src="static/image/fig1_2.png" style="width:60%">
   <div class="text">For inpainting and outpainting, LLMGA can provide detailed generation prompts based on user preferences and input images.</div>
 </div>
 
 <div class="mySlides fade">
   <div class="numbertext">3 / 4</div>
-  <img src="static/image/fig1_3.png" style="width:80%">
+  <img src="static/image/fig1_3.png" style="width:60%">
   <div class="text">Interactive image generation and editing exemplify the comprehensive capabilities of LLMGA. Users can design satisfactory images by engaging in interactions with LLMGA, leveraging its vast knowledge and ideas.</div>
 </div>
 
 
 <div class="mySlides fade">
   <div class="numbertext">4 / 4</div>
-  <img src="static/image/fig1_4.png" style="width:80%">
+  <img src="static/image/fig1_4.png" style="width:60%">
   <div class="text">Interactive image generation and editing exemplify the comprehensive capabilities of LLMGA. Users can design satisfactory images by engaging in interactions with LLMGA, leveraging its vast knowledge and ideas.</div>
 </div>
 
 </div>
 <br>
 </section>
-
+<script>
+  let slideIndex = 0;
+  showSlides();
+  
+  function showSlides() {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    let dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}    
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+    setTimeout(showSlides, 4000); // Change image every 1 seconds
+  }
+</script>
+  
 
 <section class="section">
   <div class="container is-max-desktop">
