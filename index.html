@@ -50,19 +50,19 @@
             <!--<h5 class="subtitle is-5 publication-awards">NeurIPS 2023 (Oral)</h5>-->
             <div class="is-size-5 publication-authors">
               <span class="author-block">
-                <a href="" style="color:#f6cd46;font-weight:normal;">Bin Xia<sup><b style="color:#f6cd46; font-weight:normal">&#x25B6 </b></sup><sup>*</sup></a>, 
+                <a href="" style="color:#f6cd46;font-weight:normal;">Bin Xia<sup><b style="color:#f6cd46; font-weight:normal">&#x25B6 </b></sup></a>, 
               </span>
               <span class="author-block">
-                <a href="" style="color:#59f200;font-weight:normal;">Shiyin Wang<sup><b style="color:#59f200; font-weight:normal">&#x25B6 </b></sup><sup>*</sup></a>,
+                <a href="" style="color:#59f200;font-weight:normal;">Shiyin Wang<sup><b style="color:#59f200; font-weight:normal">&#x25B6 </b></sup></a>,
               </span>
               <span class="author-block">
-                <a href="" style="color:#59f200;font-weight:normal;">Yingfan Tao<sup><b style="color:#59f200; font-weight:normal">&#x25B6 </b></sup><sup>*</sup></a>,
+                <a href="" style="color:#59f200;font-weight:normal;">Yingfan Tao<sup><b style="color:#59f200; font-weight:normal">&#x25B6 </b></sup></a>,
               </span>
               <span class="author-block">
-                <a href="" style="color:#59f200;font-weight:normal;">Yitong Wang<sup><b style="color:#59f200; font-weight:normal">&#x25B6 </b></sup><sup>*</sup></a>,
+                <a href="" style="color:#59f200;font-weight:normal;">Yitong Wang<sup><b style="color:#59f200; font-weight:normal">&#x25B6 </b></sup></a>,
               </span>
               <span class="author-block">
-                <a href="" style="color:#f6cd46;font-weight:normal;">Jiaya Jia<sup><b style="color:#f6cd46; font-weight:normal">&#x25B6 </b></sup><sup>*</sup></a>,
+                <a href="" style="color:#f6cd46;font-weight:normal;">Jiaya Jia<sup><b style="color:#f6cd46; font-weight:normal">&#x25B6 </b></sup></a>,
               </span>
             </div>
 
@@ -191,24 +191,22 @@
       <div class="content has-text-justified"> 
         <p>
           LLMGA employs the pretrained <a href="https://github.com/haotian-liu/LLaVA">LLaVA model</a> (LLaVA-7B or LLaVA-13B) as the initial MLLM, and the <a href="https://huggingface.co/runwayml/stable-diffusion-v1-5">StableDiffusion 1.5</a> (SD1.5) as the initial image generation or editing. 
-          A two-stage training scheme is designed as follows:
+          <p><b>Two stage training process:</b></p>
           <ul type="1">
-            <li><b>Stage 1: MLLM training</b>. <span style="font-size: 95%;">we first construct a training dataset including four categories:
+            <li><b>Stage 1: MLLM training</b>. <span style="font-size: 95%;">
               <ul type="1">
                 <li> <b>Dataset</b>: Four types of datasets about prompt refinement, similar image generation, inpainting & outpainting, and visual question answering are established. 
                 <li> <b>Model training</b>: We then train the MLLM on these four datasets to cultivate corresponding four fundamental capabilities.</span></li>
               </ul>  
             <li><b>Stage 2: Stable Diffusion training</b>. <span style="font-size: 95%;">we optimize SD to be adapt to the detailed generation prompts from MLLM.</span></li>
               </ul>  
-          </ul>  
+          </ul>
+          <p><b>Inference process:</b> </p> 
+          <span style="font-size: 95%;">In the inference stage, LLMGA would respond to user queries and assist in image generation and editing.</span>
         </p>
       </div>
         <div style="text-align: center;">
-          <iframe
-          src="static/image/method.pdf"
-          width="100%"
-          height="600px"
-      ></iframe>  
+          <img id="teaser" width="60%" src="static/image/method.png">   
         </div>         
     </div>
   </div>
