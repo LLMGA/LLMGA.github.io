@@ -2,9 +2,6 @@ body {
   font-family: 'Noto Sans', sans-serif;
 }
 
-.icon { vertical-align: middle; }
-.text { display: inline-block; vertical-align: middle; }
-
 .footer .icon-link {
     font-size: 25px;
     color: #000;
