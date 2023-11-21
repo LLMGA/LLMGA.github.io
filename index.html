@@ -297,37 +297,70 @@
 <div class="container is-max-desktop">
 
 
-  <!-- Grounedtext2img. -->
-  <div class="columns is-centered">
-    <div class="column is-full-width">
-      <h2 class="title is-4"><span style="font-size: 100%;">Quantitative comparison</span></h2>
-      
-      <div>
-        <img id="painting_icon" width="80%" src="static/image/tab2.png">
-    </div>
-
-    <p style="font-family:Times New Roman"><b>An evaluation dataset with 30 unseen images is constructed: each image is assocaited with three types of instructions: conversation, detailed description and complex reasoning. This leads to 90 new language-image instructions, on which we test LLaVA and GPT-4, and use GPT-4 to rate their responses from score 1 to 10. The summed score and relative score per type is reported. Overall, LLaVA achieves 85.1% relative score compared with GPT-4, indicating the effectinvess of the proposed self-instruct method in multimodal settings</b>               
-    </div>
-  </div>
-
-  <!-- Grounedtext2img. -->
+  <!-- Visual comparison. -->
   <div class="columns is-centered">
     <div class="column is-full-width">
       <h2 class="title is-4"> <span style="font-size: 100%;">Visual comparison</span></h2>
       
         <div>
-        <img id="painting_icon" width="80%" src="static/image/t2i.png">
+        <img id="painting_icon" width="100%" src="static/image/t2i.png">
         </div>
         <p style="font-family:Times New Roman"><b>Visual comparison on T2I. LLMGA can refine short prompts by adding details, such as clothing, background, and actions.</b>  
         <div>
-            <img id="painting_icon" width="80%" src="static/image/edit.png">
+            <img id="painting_icon" width="100%" src="static/image/edit.png">
         </div>
             <p style="font-family:Times New Roman"><b>Visual comparison on inpainting and outpainting. LLMGA can infer complete images based on input masked images.</b>  
               <div>
-                <img id="painting_icon" width="80%" src="static/image/IR2.png">
+                <img id="painting_icon" width="100%" src="static/image/IR2.png">
             </div>
                 <p style="font-family:Times New Roman"><b>Visual comparison of image restoration methods. Our DiffRIR can alleviate the texture, contrast, and brightness disparities.</b>  
     </div>
+  </div>
+   <!-- Qualitative comparison. -->
+   <div class="columns is-centered">
+    <div class="column is-full-width">
+      <h2 class="title is-4"><span style="font-size: 100%;">Quantitative comparison</span></h2>
+      
+      <div>
+        <img id="painting_icon" width="100%" src="static/image/tab2.png">
+    </div>
+
+    <p style="font-family:Times New Roman"><b>Quantitative comparison for outpainting and inpainting on subset of Places datasets</b>               
+    </div>
+    <div class="column is-full-width">
+      <h2 class="title is-4"><span style="font-size: 100%;">Quantitative comparison</span></h2>
+      
+    <div>
+        <img id="painting_icon" width="100%" src="static/image/tab4.png">
+    </div>
+
+    <p style="font-family:Times New Roman"><b>Datasets comparison. We conducted comparisons of CLIP-I on T2I, outpainting, and inpainting. The √ signifies the utilization of the complete dataset during training. Conversely, the absence of the √ indicates a reduction to only 10% of the original datasets.</b>               
+    </div>
+    
+    <div class="columns is-centered">
+
+      <!-- Visual Effects. -->
+      <div class="column">
+        <div class="content">
+          <div>
+            <img id="painting_icon" width="100%" src="static/image/tab1.png">
+        </div>
+        <p style="font-family:Times New Roman"><b>Quantitative comparison on T2I generation on the subset of MSCOCO dataset. The best and second best performances are marked in bold and underlined, respectively.</b>               
+        </div>
+      </div>
+      <!--/ Visual Effects. -->
+
+      <!-- Matting. -->
+      <div class="column">
+        <div class="content">
+          <div>
+            <img id="painting_icon" width="100%" src="static/image/tab3.png">
+        </div>
+        <p style="font-family:Times New Roman"><b> Quantitative comparison on image restoration for outpainting images on the subset of Places dataset.</b>               
+        </div>
+      </div>
+    </div>
+
   </div>
 </section>
 
