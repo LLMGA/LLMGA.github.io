@@ -219,7 +219,7 @@
   <!-- Grounedtext2img. -->
   <div class="columns is-centered has-text-centered">
     <div class="column is-six-fifths">
-      <h2 class="title is-3"><img id="painting_icon" width="4%" src="https://cdn-icons-png.flaticon.com/512/1698/1698535.png"> Examples of LLMGA for assisting in image generation and editing. </h2>
+      <h2 class="title is-3">Examples of LLMGA for assisting in image generation and editing. </h2>
       
 
 <div class="slideshow-container">
@@ -282,6 +282,54 @@
   }
 </script>
   
+<section class="section">
+  <!-- Results. -->
+  <div class="columns is-centered has-text-centered">
+    <div class="column is-six-fifths">
+      <h2 class="title is-3">Performance</h2>
+    </div>
+  </div>
+
+
+
+  <!-- </div> -->
+  <!--/ Results. -->    
+<div class="container is-max-desktop">
+
+
+  <!-- Grounedtext2img. -->
+  <div class="columns is-centered">
+    <div class="column is-full-width">
+      <h2 class="title is-4"><span style="font-size: 100%;">Quantitative comparison</span></h2>
+      
+      <div>
+        <img id="painting_icon" width="80%" src="static/image/tab2.png">
+    </div>
+
+    <p style="font-family:Times New Roman"><b>An evaluation dataset with 30 unseen images is constructed: each image is assocaited with three types of instructions: conversation, detailed description and complex reasoning. This leads to 90 new language-image instructions, on which we test LLaVA and GPT-4, and use GPT-4 to rate their responses from score 1 to 10. The summed score and relative score per type is reported. Overall, LLaVA achieves 85.1% relative score compared with GPT-4, indicating the effectinvess of the proposed self-instruct method in multimodal settings</b>               
+    </div>
+  </div>
+
+  <!-- Grounedtext2img. -->
+  <div class="columns is-centered">
+    <div class="column is-full-width">
+      <h2 class="title is-4"> <span style="font-size: 100%;">Visual comparison</span></h2>
+      
+        <div>
+        <img id="painting_icon" width="80%" src="static/image/t2i.png">
+        </div>
+        <p style="font-family:Times New Roman"><b>Visual comparison on T2I. LLMGA can refine short prompts by adding details, such as clothing, background, and actions.</b>  
+        <div>
+            <img id="painting_icon" width="80%" src="static/image/edit.png">
+        </div>
+            <p style="font-family:Times New Roman"><b>Visual comparison on inpainting and outpainting. LLMGA can infer complete images based on input masked images.</b>  
+              <div>
+                <img id="painting_icon" width="80%" src="static/image/IR2.png">
+            </div>
+                <p style="font-family:Times New Roman"><b>Visual comparison of image restoration methods. Our DiffRIR can alleviate the texture, contrast, and brightness disparities.</b>  
+    </div>
+  </div>
+</section>
 
 <section class="section">
   <div class="container is-max-desktop">
