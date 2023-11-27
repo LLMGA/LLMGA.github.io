@@ -166,7 +166,7 @@
           leveraging the vast reservoir of knowledge and proficiency in reasoning, comprehension, and response inherent in Large Language Models (LLMs) to assist users in image generation and editing. 
           Diverging from existing approaches where Multimodal Large Language Models (MLLMs) generate fixed-size embeddings to control Stable Diffusion (SD), our LLMGA provides a detailed language generation prompt for precise control over SD. 
           This not only augments LLM context understanding but also reduces noise in generation prompts, yields images with more intricate and precise content, and elevates the interpretability of the network.
-          To this end, we curate a comprehensive dataset comprising prompt refinement, similar image generation, inpainting \& outpainting, and visual question answering. Moreover, we propose a two-stage training scheme. 
+          To this end, we curate a comprehensive dataset comprising prompt refinement, similar image generation, inpainting & outpainting, and visual question answering. Moreover, we propose a two-stage training scheme. 
           In the first stage, we train the MLLM to grasp the properties of image generation and editing, enabling it to generate detailed prompts. In the second stage, we optimize SD to align with the MLLM's generation prompts. 
           Additionally, we propose a reference-based restoration network to alleviate texture, brightness, and contrast disparities between generated and preserved regions during image editing. 
           Extensive results show that LLMGA has promising generative capabilities and can enable wider applications in an interactive manner.
@@ -221,7 +221,7 @@
   <!-- Grounedtext2img. -->
   <div class="columns is-centered has-text-centered">
     <div class="column is-six-fifths">
-      <h2 class="title is-3"><img id="painting_icon" width="2.5%" src="static/icon/icon3.png"> Examples of LLMGA for assisting in image generation and editing. </h2>
+      <h2 class="title is-3"><img id="painting_icon" width="2.5%" src="static/icon/icon3.png"> Examples of LLMGA for assisting in image generation and editing </h2>
       
 
 <div class="slideshow-container">
@@ -234,50 +234,57 @@
     <span class="dot"></span>
     <span class="dot"></span> 
     <span class="dot"></span> 
+    <span class="dot"></span> 
   </div>
 
+  <div class="mySlides fade">
+  <div class="numbertext">1 / 8</div>
+  <img src="static/image/fig1_5.png" style="width:40%">
+  <div class="text"> More amazing and vivid generation results for T2I.</div>
+</div>
+
 <div class="mySlides fade">
-  <div class="numbertext">1 / 7</div>
+  <div class="numbertext">2 / 8</div>
+  <img src="static/image/fig1_6.png" style="width:40%">
+  <div class="text"> Examples of LLMGA on interactive generation and editing.</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 8</div>
+  <img src="static/image/fig1_7.png" style="width:40%">
+  <div class="text"> Examples of LLMGA on interactive generation and editing.</div>
+</div>
+  
+<div class="mySlides fade">
+  <div class="numbertext">4 / 8</div>
   <img src="static/image/fig1_1.png" style="width:60%;" >
   <div class="text">(1) For T2I generation, LLMGA can refine the user's generation prompt to produce more vivid and vibrant images. <br>
     (2) For similar image generation, LLMGA can understand the component and layout of the input images and generate a similar image.</div>
 </div>
 
 <div class="mySlides fade">
-  <div class="numbertext">2 / 7</div>
+  <div class="numbertext">5 / 8</div>
   <img src="static/image/fig1_2.png" style="width:60%">
   <div class="text">For inpainting and outpainting, LLMGA can provide detailed generation prompts based on user preferences and input images.</div>
 </div>
 
 <div class="mySlides fade">
-  <div class="numbertext">3 / 7</div>
+  <div class="numbertext">6 / 8</div>
   <img src="static/image/fig1_3.png" style="width:60%">
   <div class="text">Interactive image generation and editing exemplify the comprehensive capabilities of LLMGA. Users can design satisfactory images by engaging in interactions with LLMGA, leveraging its vast knowledge and ideas.</div>
 </div>
 
 
 <div class="mySlides fade">
-  <div class="numbertext">4 / 7</div>
+  <div class="numbertext">7 / 8</div>
   <img src="static/image/fig1_4.png" style="width:60%">
   <div class="text">Interactive image generation and editing exemplify the comprehensive capabilities of LLMGA. Users can design satisfactory images by engaging in interactions with LLMGA, leveraging its vast knowledge and ideas.</div>
 </div>
 
 <div class="mySlides fade">
-  <div class="numbertext">5 / 7</div>
-  <img src="static/image/fig1_5.png" style="width:40%">
-  <div class="text"> More amazing and vivid generation results for T2I.</div>
-</div>
-
-<div class="mySlides fade">
-  <div class="numbertext">6 / 7</div>
-  <img src="static/image/fig1_6.png" style="width:40%">
-  <div class="text"> Examples of LLMGA on interactive generation and editing.</div>
-</div>
-
-<div class="mySlides fade">
-  <div class="numbertext">7 / 7</div>
-  <img src="static/image/fig1_7.png" style="width:40%">
-  <div class="text"> Examples of LLMGA on interactive generation and editing.</div>
+  <div class="numbertext">8 / 8</div>
+  <img src="static/image/data2.png" style="width:60%">
+  <div class="text">An example of generating detailed descriptions for training data.</div>
 </div>
 
 </div>
@@ -358,54 +365,39 @@
   <!-- Visual comparison. -->
   <div class="columns is-centered">
     <div class="column is-full-width">
-      <h2 class="title is-4"><img id="painting_icon" width="4%" src="static/icon/icon2.png"> <span style="font-size: 100%;"> Visual comparison</span></h2>
+        <h2 class="title is-4"> <span style="font-size: 100%;"> Visual comparison on T2I</span></h2>
+        <p style="font-family:Times New Roman"><b>LLMGA can refine short prompts by adding details, such as clothing, background, and actions.</b></p>
       
         <div>
-          <img src="static/image/t2i.png" style="width:100%">
+          <img src="static/image/t2i-sum.png" style="width:80%">
         </div>
-        <div style="text-align: center;"><p style="font-family:Times New Roman"><b>Visual comparison on T2I. LLMGA can refine short prompts by adding details, such as clothing, background, and actions.</b></p></div>  
+      
+        <h2 class="title is-4"> <span style="font-size: 100%;"> Visual comparison on inpainting and outpainting</span></h2>
+        <p style="font-family:Times New Roman"><b>LLMGA can infer complete images based on input masked images.</b></p>
+      
+        <div>
+          <img src="static/image/edit-sum.png" style="width:80%">
+        </div>
 
+        <h2 class="title is-4"> <span style="font-size: 100%;"> Visual comparison of image restoration methods</span></h2>
+        <p style="font-family:Times New Roman"><b>Our DiffRIR can alleviate the texture, contrast, and brightness disparities.</b></p>
+      
         <div>
-          <img src="static/image/t2i-sup.png" style="width:100%">
+          <img src="static/image/IR-sup.png" style="width:80%">
         </div>
-        <div style="text-align: center;"><p style="font-family:Times New Roman"><b>Visual comparison on T2I. LLMGA can refine short prompts by adding details, such as clothing, background, and actions. In addition, for unfamiliar concepts such as a space elevator, LLMGA can utilize its extensive knowledge base from LLM or accurate generation.</b></p></div>  
+      
 
-        <div>
-          <img src="static/image/edit.png" style="width:100%">
-        </div>
-        <div style="text-align: center;"><p style="font-family:Times New Roman"><b>Visual comparison on inpainting and outpainting. LLMGA can infer complete images based on input masked images.</b></p></div>  
-              
-              
-        <div>
-        <img src="static/image/edit-sup.png" style="width:100%">
-        </div>
-        <div style="text-align: center;"><p style="font-family:Times New Roman"><b>Visual comparison on inpainting and outpainting. LLMGA can infer complete images based on input masked images.</b> </p></div>
-        
-        <div>
-          <img src="static/image/IR2.png" style="width:100%">
-          </div>
-          <div style="text-align: center;"><p style="font-family:Times New Roman"><b>Visual comparison of image restoration methods. Our DiffRIR can alleviate the texture, contrast, and brightness disparities.</b> </p></div>   
-        
-          <div>
-          <img src="static/image/IR-sup.png" style="width:100%">
-          </div>
-          <div style="text-align: center;"><p style="font-family:Times New Roman"><b>Visual comparison of image restoration methods. Our DiffRIR can alleviate the texture, contrast, and brightness disparities.</b> </p></div>   
     </div>
   </div>
    <!-- Captioning comparison. -->
    <div class="columns is-centered">
     <div class="column is-full-width">
-      <h2 class="title is-4"><img id="painting_icon" width="4%" src="static/icon/icon2.png"> <span style="font-size: 100%;"> Detailed description generation ability</span></h2>
-      
-        <div>
-          <img src="static/image/data2.png" style="width:100%">
-        </div>
-        <div style="text-align: center;"><p style="font-family:Times New Roman"><b>An example of generating detailed descriptions for training data.</b></p></div>  
-
+      <h2 class="title is-4"> <span style="font-size: 100%;"> Detailed description generation ability</span></h2>
+      <p style="font-family:Times New Roman"><b>Comparison of three caption types:<br>(1) Original captions are included in the existing datasets, which are concise while encompassing abundant proper nouns. <br>(2) LLaVA descriptions based on images are generated by utilizing LLaVA to deliver detailed depictions of images. While offering a more comprehensive overview with elaborate descriptions, they may not effectively convey certain proper nouns. <br>(3) LLaVA descriptions based on images and captions refer to descriptions generated by guiding LLaVA to deliver comprehensive details, considering both images and captions simultaneously. These descriptions encompass both detailed descriptions and proper nouns red color.  </b></p></div>  
         <div>
           <img src="static/image/data.png" style="width:100%">
         </div>
-        <div style="text-align: center;"><p style="font-family:Times New Roman"><b>Comparison of three caption types:<br>(1) Original captions are included in the existing datasets, which are concise while encompassing abundant proper nouns. <br>(2) LLaVA descriptions based on images are generated by utilizing LLaVA to deliver detailed depictions of images. While offering a more comprehensive overview with elaborate descriptions, they may not effectively convey certain proper nouns. <br>(3) LLaVA descriptions based on images and captions refer to descriptions generated by guiding LLaVA to deliver comprehensive details, considering both images and captions simultaneously. These descriptions encompass both detailed descriptions and proper nouns red color.  </b></p></div>  
+        
 
   
     </div>
