@@ -303,8 +303,9 @@
 </section>
 <script>
   let slideIndex = 0;
+  let timer;
   showSlides();
-  
+
   function showSlides() {
     let i;
     let slides = document.getElementsByClassName("mySlides");
@@ -319,8 +320,17 @@
     }
     slides[slideIndex-1].style.display = "block";  
     dots[slideIndex-1].className += " active";
-    setTimeout(showSlides, 4000); // Change image every 1 seconds
+    timer = setTimeout(showSlides, 4000); // Change image every 1 seconds
   }
+  // 鼠标移入，图片暂停
+  secEle.addEventListener("mouseenter", function () {
+    clearTimeout(timer);
+    timer = null;
+  });
+  // 鼠标移出，图片恢复滚动
+  secEle.addEventListener("mouseleave", showSlides);
+
+
 </script>
 
 
