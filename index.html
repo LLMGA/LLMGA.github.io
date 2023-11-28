@@ -6,6 +6,7 @@
   <meta name="keywords" content="multimodal, Stable Diffusion, AIGC">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>LLMGA: Multimodal Large Language Model based Generation Assistant</title>
+  <link rel="shortcut icon" href="static/image/llmga_logo.png" type="image/png">
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
@@ -159,7 +160,7 @@
     <!-- Abstract. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
+        <h2 class="title is-3"><img id="painting_icon" width="6%" src="static/image/llmga_logo.png"> Abstract</h2>
         <div class="content has-text-justified">
           <p>
             In this paper, we introduce a Multimodal Large Language Model-based Generation Assistant (LLMGA), 
@@ -243,13 +244,13 @@
 <div class="slideshow-container">
 
   <div style="text-align:center">
-    <span class="dot"></span> 
-    <span class="dot"></span> 
-    <span class="dot"></span> 
-    <span class="dot"></span> 
-    <span class="dot"></span>
-    <span class="dot"></span> 
-    <span class="dot"></span> 
+    <span class="dot" onclick="currentSlide(1)"></span> 
+    <span class="dot" onclick="currentSlide(2)"></span> 
+    <span class="dot" onclick="currentSlide(3)"></span> 
+    <span class="dot" onclick="currentSlide(4)"></span> 
+    <span class="dot" onclick="currentSlide(5)"></span>
+    <span class="dot" onclick="currentSlide(6)"></span> 
+    <span class="dot" onclick="currentSlide(7)"></span> 
   </div>
 
   <div class="mySlides fade">
@@ -296,42 +297,39 @@
   <div class="text">Interactive image generation and editing exemplify the comprehensive capabilities of LLMGA. Users can design satisfactory images by engaging in interactions with LLMGA, leveraging its vast knowledge and ideas.</div>
 </div>
 
-
-
 </div>
 <br>
 </section>
+
 <script>
-  let slideIndex = 0;
-  let timer;
-  showSlides();
-  function solve(){
-    let i;
-    let slides = document.getElementsByClassName("mySlides");
-    let dots = document.getElementsByClassName("dot");
-    for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";  
-    }
-    slideIndex++;
-    if (slideIndex > slides.length) {slideIndex = 1}    
-    for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-    }
-    slides[slideIndex-1].style.display = "block";  
-    dots[slideIndex-1].className += " active";
+  var slideIndex = 1;
+  function plusSlides(n) {
+  showSlides(slideIndex += n);
   }
-  function showSlides() {
-    timer = setInterval(solve(), 2000); // Change image every 1 seconds
+  function currentSlide(n) {
+  showSlides(slideIndex = n);
   }
-  // 鼠标移入，图片暂停
-  secEle.addEventListener("mouseenter", function () {
-    clearInterval(timer);
-    timer = null;
-  });
-  // 鼠标移出，图片恢复滚动
-  secEle.addEventListener("mouseleave", showSlides);
 
+  function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
 
+  if (n > slides.length) {slideIndex = 1} 
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none"; 
+  }//class为mySlides下的元素,即不展示项目的图片元素、数字元素和文本元素
+  
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");//将激活的下标元素,改为不再展示
+  }
+  slides[slideIndex-1].style.display = "block";//轮播的元素展示 
+  dots[slideIndex-1].className += " active";//轮播图片对应下标样式激活
+  //setTimeout(showSlides(slideIndex), 4000);
+  //slideIndex ++;
+  }
+  showSlides(slideIndex);
 </script>
 
 
