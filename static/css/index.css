@@ -170,3 +170,8 @@ body {
 .active, .dot:hover {
   background-color: #717171;
 }
+.eight {
+
+  padding: 0 15% 0 15%;
+  text-align:left;
+}
